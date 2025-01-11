@@ -32,23 +32,11 @@ sudo apt-get install -y microsoft-edge-stable
 echo "Installing Epiphany (GNOME Web) Browser..."
 sudo apt-get install -y epiphany-browser
 
-# Install Vivaldi Browser
-echo "Installing Vivaldi Browser..."
-sudo apt install -y wget
-wget -qO- https://repo.vivaldi.com/archive/linux_signing_key.pub | gpg --dearmor | sudo dd of=/usr/share/keyrings/vivaldi-browser.gpg
-echo "deb [signed-by=/usr/share/keyrings/vivaldi-browser.gpg arch=$(dpkg --print-architecture)] https://repo.vivaldi.com/archive/deb/ stable main" | sudo dd of=/etc/apt/sources.list.d/vivaldi-archive.list
-sudo apt update -y
-sudo apt install -y vivaldi-stable
-
 # Install Midori Web Browser
 echo "Installing Midori Browser..."
 sudo apt update -y
 sudo apt install snapd
 sudo snap install midori 
-
-# Install Konqueror Web Browser
-echo "Installing Konqueror Browser..."
-sudo apt install -y konqueror
 
 # Install Falkon Web Browser
 echo "Installing Falkon Browser..."
@@ -93,12 +81,6 @@ else
     echo "Microsoft Edge installation failed."
 fi
 
-# Verify Vivaldi Browser installation
-if command -v vivaldi &>/dev/null; then
-    echo "Vivaldi Browser installed successfully."
-else
-    echo "Vivaldi Browser installation failed."
-fi
 
 # Verify Midori Browser installation
 if command -v midori &>/dev/null; then
@@ -112,13 +94,6 @@ if command -v epiphany-browser &>/dev/null; then
     echo "Epiphany (GNOME Web) Browser installed successfully."
 else
     echo "Epiphany (GNOME Web) Browser installation failed."
-fi
-
-# Verify Konqueror Browser installation
-if command -v konqueror &>/dev/null; then
-    echo "Konqueror Browser installed successfully."
-else
-    echo "Konqueror Browser installation failed."
 fi
 
 # Verify Falkon Browser installation
