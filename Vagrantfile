@@ -4,7 +4,7 @@ Vagrant.configure("2") do |config|
 
   # Configure VirtualBox provider
   config.vm.provider "virtualbox" do |vb|
-    vb.memory = "2048" # Assign 2GB of RAM
+    vb.memory = "3072" # Assign 3GB of RAM
     vb.cpus = 2        # Assign 2 CPUs
     vb.gui = true      # Enable GUI
 
