@@ -28,10 +28,6 @@ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge sta
 sudo apt-get update -y
 sudo apt-get install -y microsoft-edge-stable
 
-# Install Epiphany Browser (GNOME Web)
-echo "Installing Epiphany (GNOME Web) Browser..."
-sudo apt-get install -y epiphany-browser
-
 # Install Midori Web Browser
 echo "Installing Midori Browser..."
 sudo apt update -y
@@ -87,13 +83,6 @@ if command -v midori &>/dev/null; then
     echo "Midori Browser installed successfully."
 else
     echo "Midori Browser installation failed."
-fi
-
-# Verify Epiphany Browser installation
-if command -v epiphany-browser &>/dev/null; then
-    echo "Epiphany (GNOME Web) Browser installed successfully."
-else
-    echo "Epiphany (GNOME Web) Browser installation failed."
 fi
 
 # Verify Falkon Browser installation
