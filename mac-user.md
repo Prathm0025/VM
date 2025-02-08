@@ -68,3 +68,16 @@
 - Restart if necessary to apply changes fully.
 
 This configuration allows a standard user to install applications without needing admin credentials while ensuring system flexibility.
+
+```
+sudo chmod -R 777 /Applications
+sudo chmod -R 777 ~/Library
+sudo chmod -R 777 /Library/Application\ Support
+sudo security authorizationdb write system.install.app-store allow
+sudo security authorizationdb write system.install.software allow
+sudo security authorizationdb write system.preferences allow
+sudo security authorizationdb write system.preferences.security allow
+sudo chown -R username /Applications
+sudo chown -R username ~/Library
+sudo chown -R username /Library/Application\ Support
+```
