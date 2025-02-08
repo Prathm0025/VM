@@ -3,7 +3,11 @@
 1. Log in to the administrator account on the Mac.
 2. Open **Terminal**.
 3. Add the standard user to the sudo file:
-    
+
+    ```
+    dscl . list /users
+
+    ``` 
     ```
     sudo visudo
     ```
