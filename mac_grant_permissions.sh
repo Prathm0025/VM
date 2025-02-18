@@ -39,3 +39,5 @@ fi
 
 echo "Script completed successfully."
 exit 0
+
+# sudo dseditgroup -o edit -a username -t user admin
