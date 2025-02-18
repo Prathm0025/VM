@@ -86,6 +86,4 @@ sudo chown -R username ~/Library
 sudo chown -R username /Library/Application\ Support
 ```
 
-```
-sudo dseditgroup -o edit -a username -t user admin
-```
+
